@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net"
 )
@@ -9,7 +8,7 @@ import (
 func FindMyInterface() (string, error) {
 	i, err := net.Interfaces()
 	if err != nil {
-		log.Fatalf("We have error: %w ", err)
+		log.Fatalf("We have error: %s ", err)
 	}
 	for _, f := range i {
 		if f.Flags&net.FlagUp != 0 && f.Flags&net.FlagLoopback == 0 {
@@ -27,5 +26,5 @@ func FindMyInterface() (string, error) {
 			}
 		}
 	}
-	return "", fmt.Errorf("No interfaces")
+	return "", nil
 }
