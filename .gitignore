@@ -1,0 +1,24 @@
+/bin
+# Binaries
+*.exe
+*.out
+*.test
+
+# Output folders
+/bin/
+/build/
+/dist/
+
+# Test artifacts
+*.coverprofile
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Env
+.env
